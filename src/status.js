@@ -7,10 +7,10 @@ const Status = () => {
   const [statusArray, setStatusArray] = useState([]);
 
   const fetchStatuses = async () => {
-    const response = await fetch(url);
+    const response = await fetch(url)
     const data = await response.json();
-    console.log("data ", data);
     setStatusArray(data);
+    
   };
 
   useEffect(() => {
