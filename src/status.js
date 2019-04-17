@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Container, Item, Label, Segment } from "semantic-ui-react";
 import tubeMap from './static/tubeMap'
 
+
 const Status = () => {
   const url = "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status";
   const [statusArray, setStatusArray] = useState([]);
@@ -10,7 +11,6 @@ const Status = () => {
     const response = await fetch(url)
     const data = await response.json();
     setStatusArray(data);
-    
   };
 
   useEffect(() => {
